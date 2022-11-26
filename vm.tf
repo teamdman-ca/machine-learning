@@ -28,8 +28,8 @@ resource "azurerm_network_interface" "main" {
 resource "azurerm_linux_virtual_machine" "main" {
   name                = "machine-learning-vm"
   resource_group_name = azurerm_resource_group.main.name
-  location            = "eastus"
-  size                = "Standard_NC6s_v3"
+  location            = "canadacentral"
+  size                = "Standard_NCs_v3"
   admin_username      = "adminuser"
   network_interface_ids = [
     azurerm_network_interface.main.id,
